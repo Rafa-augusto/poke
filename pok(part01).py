@@ -94,7 +94,8 @@ while True:
             pokedex.append('nada')
             pokedex.append('nada')
             pokedex.append('nada')
-            break
+            continue
         if acao == 5:
             break
         break
+    break
