@@ -7,10 +7,10 @@ while True:
     nome = input("Olá me chame de professor carvalho, seu nome é ?\n")
     print(f"perfeito {nome}, sua jornada pokémon se iniciará agora.... mas antes você precisará de um equipamento próprio para caçar pokémons\n(x3 pokébolas adquiridas)")
     x = ("pokebola")
-    pokebolas.append(x)
-    pokebolas.append(x)
-    pokebolas.append(x)
     while True:
+        pokebolas.append(x)
+        pokebolas.append(x)
+        pokebolas.append(x)
         print("Escolha uma ação:\n|1.Ir para floresta |\n|2.Ir para a caverna|\n|3.     Pokedex     |\n|4.Reiniciar o jogo |\n|5.  Sair do jogo   |")
         acao = int(input("Selecione uma ação: "))
         if acao <1 or acao > 5:
