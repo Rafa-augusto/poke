@@ -1,19 +1,20 @@
 import random
 pokebolas = []
-pokedex = ['nada','nada','nada']
+pokedex = ['nada','nada','nada','nada']
 pokeFloresta = ['Caterpie','Pinsir','Pineco','Wurmple','Wurmple','Wurmple','Silcoon','Silcoon','Silcoon','Cascoon','Volbeat','Illumise','Kricketot','Illumise','Caterpie','Caterpie','Caterpie','Pinsir','Pineco','Pineco']
 pokeCaverna = ['Diglett','Cubone','Nosepass','Gigalith','Geodude','Geodude','Geodude','Nosepass','Nosepass','Diglett','Diglett']
 while True:
     nome = input("Olá me chame de professor carvalho, seu nome é ?\n")
-    print(f"perfeito {nome}, sua jornada pokémon se iniciará agora.... mas antes você precisará de um equipamento próprio para caçar pokémons\n(x3 pokébolas adquiridas)")
+    print(f"perfeito {nome}, sua jornada pokémon se iniciará agora.... mas antes você precisará de um equipamento próprio para caçar pokémons\n(x4 pokébolas adquiridas)")
     x = ("pokebola")
+    pokebolas.append(x)
+    pokebolas.append(x)
+    pokebolas.append(x)
+    pokebolas.append(x)
     while True:
-        pokebolas.append(x)
-        pokebolas.append(x)
-        pokebolas.append(x)
-        print("Escolha uma ação:\n|1.Ir para floresta |\n|2.Ir para a caverna|\n|3.     Pokedex     |\n|4.Reiniciar o jogo |\n|5.  Sair do jogo   |")
+        print("Escolha uma ação:\n|1.Ir para floresta |\n|2.Ir para a caverna|\n|3.     Pokedex     |\n|4.Reiniciar o jogo |\n|5.  Sair do jogo   |\n|6.    Pokebolas    |")
         acao = int(input("Selecione uma ação: "))
-        if acao <1 or acao > 5:
+        if acao <1 or acao > 6:
             print("Esta função não existe selecione novamente:")
             continue
         if acao == 1:
@@ -87,15 +88,20 @@ while True:
         if acao == 3:
             print(pokedex)
             continue
-        if acao == 4:
-            pokedex.pop()
-            pokedex.pop()
-            pokedex.pop()
-            pokedex.append('nada')
-            pokedex.append('nada')
-            pokedex.append('nada')
+        if acao == 6:
+            print(f"{len(pokebolas)} pokebolas no bolso.")
             continue
-        if acao == 5:
+        if acao == 4 or acao == 5:
+            pokedex.pop()
+            pokedex.pop()
+            pokedex.pop()
+            pokedex.pop()
+            pokedex.append('nada')
+            pokedex.append('nada')
+            pokedex.append('nada')
+            pokedex.append('nada')
             break
+    if acao == 5:    
         break
-    break
+    if acao == 4:
+        continue
